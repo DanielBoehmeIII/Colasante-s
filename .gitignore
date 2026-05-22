@@ -12,3 +12,9 @@ dist/
 .next/
 .env
 .env.local
+
+node_modules/
+dist/
+.next/
+animations/
+*.mp4
