@@ -1,0 +1,1160 @@
+/* ─── Page Shell ─────────────────────────────────────────────────────────────── */
+.cs-page {
+  min-height: 100vh;
+  background: var(--bg);
+  overflow-x: visible;
+}
+
+/* ─── HERO ───────────────────────────────────────────────────────────────────── */
+.cs-hero {
+  position: relative;
+  height: 220vh;
+  min-height: 1280px;
+  overflow: visible;
+  background: #fdf6ee;
+}
+
+.cs-hero-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fdf6ee;
+}
+
+.cs-hero-video {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(100%, calc(100vh * 1.775));
+  height: min(100%, calc(100vw / 1.775));
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  background: #fdf6ee;
+  /* Hidden until ready — poster shows in its place */
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.cs-hero-video--ready {
+  opacity: 1;
+}
+
+/* Light cream-blush gradient overlay */
+.cs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(250, 248, 245, 0.08) 0%,
+      rgba(250, 248, 245, 0.04) 38%,
+      rgba(245, 238, 230, 0.10) 68%,
+      rgba(245, 235, 225, 0.32) 100%
+    ),
+    radial-gradient(ellipse 84% 54% at 50% 42%, rgba(255,255,255,0.05) 0%, transparent 70%);
+}
+
+/* Hero content */
+.cs-hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  --hero-copy-opacity: 1;
+  --hero-copy-lift: 0px;
+  opacity: var(--hero-copy-opacity);
+  transform: translateY(var(--hero-copy-lift));
+  transition: opacity 0.12s linear, transform 0.12s linear;
+  will-change: opacity, transform;
+}
+
+.cs-hero-copy {
+  position: absolute;
+  top: 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: min(34vw, 520px);
+}
+
+.cs-hero-copy--left {
+  left: clamp(28px, 6vw, 96px);
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+  transform: translateY(-50%);
+}
+
+.cs-hero-copy--right {
+  right: clamp(28px, 6vw, 96px);
+  align-items: flex-end;
+  text-align: right;
+  transform: translateY(-18%);
+}
+
+.cs-hero-eyebrow {
+  letter-spacing: 0.3em;
+  color: #7f1f2f;
+  font-weight: 700;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.9),
+    0 8px 24px rgba(255,255,255,0.7);
+}
+
+.cs-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 7vw, 8rem);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.8),
+    0 5px 20px rgba(255,255,255,0.76),
+    0 12px 36px rgba(255,255,255,0.55);
+}
+
+.cs-hero-title-em {
+  font-style: italic;
+  color: #8b2635;
+  margin-top: -6px;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.78),
+    0 5px 22px rgba(255,255,255,0.72),
+    0 12px 38px rgba(139,38,53,0.16);
+}
+
+.cs-hero-sub {
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  line-height: 1.65;
+  color: var(--text-2);
+  max-width: 460px;
+  font-weight: 500;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.92),
+    0 8px 26px rgba(255,255,255,0.72);
+}
+
+.cs-hero-br { display: none; }
+@media (max-width: 600px) { .cs-hero-br { display: inline; } }
+
+.cs-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.cs-hero-cta-primary {
+  padding: 15px 32px;
+  font-size: 0.82rem;
+}
+
+.cs-hero-phone {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-3);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: var(--transition);
+  text-shadow: 0 1px 4px rgba(255,255,255,0.4);
+}
+
+.cs-hero-phone:hover {
+  color: var(--rose);
+}
+
+/* Scroll indicator */
+.cs-hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-4);
+  font-size: 0.60rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.cs-hero-scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, var(--rose-light));
+  animation: float 2.2s ease-in-out infinite;
+}
+
+/* ─── STATS BAR ──────────────────────────────────────────────────────────────── */
+.cs-stats {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0;
+}
+
+.cs-stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cs-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 20px 16px;
+  border-right: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+
+.cs-stat-card:last-child { border-right: none; }
+
+.cs-stat-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cs-stat-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--rose);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.cs-stat-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  font-family: var(--font-sans);
+}
+
+/* ─── SECTION COMMON ─────────────────────────────────────────────────────────── */
+.cs-section {
+  padding: 108px 0;
+}
+
+.cs-section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.cs-section-header .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.cs-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.cs-section-sub {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-3);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ─── BROWSE BY OCCASION ─────────────────────────────────────────────────────── */
+.cs-occasions-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-occasions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cs-occasion-card {
+  background: var(--occ-bg, #faf8f5);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  padding: 36px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.28s var(--ease-out-expo), box-shadow 0.28s var(--ease-out-expo), border-color 0.22s;
+  min-height: 210px;
+  justify-content: center;
+}
+
+.cs-occasion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(100, 60, 30, 0.1), 0 4px 12px rgba(100, 60, 30, 0.06);
+  border-color: var(--occ-accent, var(--border-2));
+}
+
+.cs-occasion-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--occ-accent, var(--text-2));
+  flex-shrink: 0;
+  transition: transform 0.22s var(--ease-out-expo);
+}
+
+.cs-occasion-card:hover .cs-occasion-icon {
+  transform: scale(1.08);
+}
+
+.cs-occasion-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.cs-occasion-label {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* Hover reveal layer */
+.cs-occasion-hover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+  gap: 12px;
+}
+
+.cs-occasion-card:hover .cs-occasion-hover {
+  opacity: 1;
+}
+
+.cs-occasion-desc {
+  font-size: 0.82rem;
+  line-height: 1.58;
+  color: var(--text-2);
+}
+
+.cs-occasion-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--occ-accent, var(--rose));
+  pointer-events: none;
+}
+
+.cs-occasion-cta svg {
+  transition: transform 0.2s ease;
+}
+
+.cs-occasion-card:hover .cs-occasion-cta svg {
+  transform: translateX(3px);
+}
+
+/* ─── FRESH FROM OUR SHOP ────────────────────────────────────────────────────── */
+.cs-products-section {
+  background: var(--bg);
+}
+
+.cs-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cs-product-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: transform 0.28s var(--ease-out-expo), box-shadow 0.28s var(--ease-out-expo);
+}
+
+.cs-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(100, 60, 30, 0.1);
+}
+
+.cs-product-img {
+  height: 210px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cs-product-img-floral {
+  width: 90px;
+  height: 90px;
+  opacity: 0.85;
+}
+
+.cs-product-img-floral svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.60rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rose);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 4px 10px;
+  border-radius: 99px;
+  border: 1px solid var(--rose-bloom);
+  backdrop-filter: blur(8px);
+}
+
+.cs-product-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cs-product-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.cs-product-desc {
+  font-size: 0.80rem;
+  line-height: 1.58;
+  color: var(--text-3);
+  flex: 1;
+}
+
+.cs-product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.cs-product-price {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.cs-product-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose);
+  background: var(--rose-dim);
+  border: 1px solid var(--rose-bloom);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cs-product-cta:hover {
+  background: var(--rose);
+  color: #fff;
+  border-color: var(--rose);
+}
+
+.cs-product-cta svg {
+  transition: transform 0.18s;
+}
+
+.cs-product-cta:hover svg {
+  transform: translateX(2px);
+}
+
+/* ─── SERVICES PREVIEW ───────────────────────────────────────────────────────── */
+.cs-services-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.cs-service-card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+  transition: var(--transition);
+}
+
+.cs-service-card:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: var(--border);
+}
+
+.cs-service-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--rose-light);
+}
+
+.cs-service-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-service-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.cs-service-desc {
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--text-3);
+  flex: 1;
+}
+
+.cs-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-top: 4px;
+}
+
+.cs-service-link:hover {
+  color: var(--rose-mid);
+  gap: 8px;
+}
+
+.cs-service-link svg {
+  transition: transform 0.18s;
+}
+
+.cs-service-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* ─── ABOUT SECTION ──────────────────────────────────────────────────────────── */
+.cs-about-section {
+  background: var(--bg);
+}
+
+.cs-about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.cs-about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-about-text .eyebrow { display: block; }
+
+.cs-about-body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-2);
+}
+
+.cs-about-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.cs-about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-about-card {
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 280px;
+  justify-content: center;
+}
+
+.cs-about-floral {
+  width: 160px;
+  height: 180px;
+}
+
+.cs-about-floral svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cs-about-card-quote {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-3);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.cs-about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.cs-about-stat {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cs-about-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--rose);
+  line-height: 1;
+}
+
+.cs-about-stat-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  font-family: var(--font-sans);
+}
+
+/* ─── TESTIMONIALS ───────────────────────────────────────────────────────────── */
+.cs-testimonials-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.cs-testimonial-card {
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.28s var(--ease-out-expo);
+}
+
+.cs-testimonial-card:hover {
+  transform: translateY(-3px);
+}
+
+.cs-testimonial-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.cs-testimonial-text {
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: var(--text-2);
+  font-style: italic;
+  flex: 1;
+}
+
+.cs-testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.cs-testimonial-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+.cs-testimonial-loc {
+  font-size: 0.76rem;
+  color: var(--text-4);
+  font-family: var(--font-sans);
+}
+
+/* ─── CONTACT SECTION ────────────────────────────────────────────────────────── */
+.cs-contact-section {
+  background: var(--bg);
+}
+
+.cs-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.cs-contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cs-contact-left .eyebrow { display: block; }
+
+.cs-contact-sub {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+
+.cs-contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 4px 0;
+}
+
+.cs-contact-method {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+a.cs-contact-method:hover {
+  border-color: var(--border-3);
+  background: rgba(139, 38, 53, 0.04);
+}
+
+.cs-contact-method-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius);
+  background: var(--rose-dim);
+  border: 1px solid var(--rose-bloom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.cs-contact-method > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cs-contact-method-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  font-family: var(--font-sans);
+}
+
+.cs-contact-method-value {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  font-family: var(--font-sans);
+  display: block;
+}
+
+.cs-contact-method-value--dim {
+  color: var(--text-3);
+  font-weight: 400;
+  font-size: 0.82rem;
+}
+
+/* ─── FORM ───────────────────────────────────────────────────────────────────── */
+.cs-form {
+  border-radius: var(--radius-2xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cs-form-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+
+.cs-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cs-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cs-form-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  font-family: var(--font-sans);
+}
+
+.cs-form-input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  padding: 11px 14px;
+  font-size: 0.88rem;
+  color: var(--text);
+  outline: none;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.cs-form-input::placeholder {
+  color: var(--text-4);
+}
+
+.cs-form-input:focus {
+  border-color: var(--rose-light);
+  box-shadow: 0 0 0 3px var(--rose-dim);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.cs-form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a89078' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.cs-form-select option {
+  background: #fff;
+  color: var(--text);
+}
+
+.cs-form-textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.cs-form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+.cs-form-success {
+  border-radius: var(--radius-2xl);
+  padding: 60px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.cs-form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.cs-form-success p {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+/* ─── MOBILE STICKY ──────────────────────────────────────────────────────────── */
+.cs-mobile-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  padding: 12px 16px;
+  background: rgba(250, 248, 245, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  gap: 10px;
+}
+
+.cs-mobile-sticky-call {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px;
+  background: var(--rose);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.cs-mobile-sticky-call:hover {
+  background: var(--rose-mid);
+}
+
+.cs-mobile-sticky-order {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  color: var(--rose);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-3);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cs-mobile-sticky-order:hover {
+  background: var(--rose-dim);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .cs-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs-occasions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cs-about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .cs-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero-sticky {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .cs-hero-video {
+    top: 32%;
+    width: clamp(620px, 172vw, 820px);
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+  }
+
+  .cs-hero-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(253, 246, 238, 0.04) 0%,
+        rgba(253, 246, 238, 0.02) 48%,
+        rgba(253, 246, 238, 0.55) 74%,
+        #fdf6ee 100%
+      );
+  }
+
+  .cs-hero-content {
+    position: absolute;
+    inset: auto 0 clamp(64px, 8dvh, 92px);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 0 20px;
+    max-width: none;
+  }
+
+  .cs-hero-copy {
+    position: static;
+    width: 100%;
+    max-width: 360px;
+    align-items: center;
+    text-align: center;
+    transform: none;
+    gap: 6px;
+  }
+
+  .cs-hero-copy--right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cs-section { padding: 72px 0; }
+  .cs-hero-eyebrow { font-size: 0.58rem; }
+  .cs-hero-title { font-size: clamp(2.7rem, 13vw, 4rem); }
+  .cs-hero-sub {
+    max-width: 330px;
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+  .cs-services-grid { grid-template-columns: 1fr; }
+  .cs-testimonials-grid { grid-template-columns: 1fr; }
+  .cs-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .cs-stat-card:nth-child(2) { border-right: none; }
+  .cs-stat-card:nth-child(3) { border-right: 1px solid var(--border); }
+  .cs-stat-card:nth-child(3),
+  .cs-stat-card:nth-child(4) { border-top: 1px solid var(--border); }
+  .cs-form-row { grid-template-columns: 1fr; }
+  .cs-mobile-sticky { display: flex; }
+  .cs-page { padding-bottom: 76px; }
+  .cs-about-stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .cs-hero {
+    height: 240vh;
+    min-height: 1320px;
+  }
+
+  .cs-hero-video {
+    top: 30%;
+    width: clamp(600px, 182vw, 740px);
+  }
+
+  .cs-occasions-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-products-grid { grid-template-columns: 1fr; }
+  .cs-hero-ctas { flex-direction: column; width: 100%; }
+  .cs-hero-cta-primary,
+  .cs-hero-ctas .btn-secondary { width: 100%; justify-content: center; }
+  .cs-form { padding: 24px 18px; }
+  .cs-about-stats { grid-template-columns: repeat(2, 1fr); }
+}

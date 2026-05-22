@@ -1,0 +1,514 @@
+/* ─── Services Page ──────────────────────────────────────────────────────────── */
+.svc-page {
+  overflow-x: hidden;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────────────────────── */
+.svc-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg-2);
+  padding-top: 88px;
+}
+
+.svc-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 80% at 70% 40%, rgba(139,38,53,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 20% 80%, rgba(184,137,90,0.04) 0%, transparent 50%);
+  z-index: 0;
+}
+
+/* Bark-inspired rings */
+.svc-hero-rings {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.svc-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(34,197,94,0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svc-ring-1 { width: 300px; height: 300px; border-color: rgba(34,197,94,0.14); }
+.svc-ring-2 { width: 500px; height: 500px; border-color: rgba(34,197,94,0.08); }
+.svc-ring-3 { width: 700px; height: 700px; border-color: rgba(34,197,94,0.04); }
+
+.svc-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 80px;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.svc-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 18px;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 99px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin-bottom: 24px;
+}
+
+.svc-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.svc-hero-title-accent {
+  color: var(--rose);
+  display: block;
+  font-style: italic;
+}
+
+.svc-hero-sub {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+.svc-hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Stat cards in hero */
+.svc-hero-badge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.svc-hero-stat {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(12px);
+}
+
+.svc-hero-stat-val {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--rose);
+  line-height: 1;
+}
+
+.svc-hero-stat-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* ─── Services Section ───────────────────────────────────────────────────────── */
+.svc-services-section {
+  background: var(--bg);
+}
+
+.svc-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.svc-card {
+  border-radius: var(--radius-xl);
+  padding: 36px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
+}
+
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 1px var(--border-2), 0 16px 48px rgba(100,60,30,0.12);
+}
+
+.svc-card-header {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.svc-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--rose-dim);
+  border: 1px solid var(--rose-bloom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.svc-card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.svc-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.svc-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+
+/* Use cases */
+.svc-card-uses {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.svc-card-uses-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 10px;
+}
+
+.svc-card-uses-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.svc-card-uses-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-3);
+}
+
+.svc-card-uses-list li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Safety note */
+.svc-card-trust {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--rose-dim);
+  border: 1px solid var(--rose-bloom);
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+
+.svc-card-trust svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.svc-card-cta {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+/* ─── Feature Strip ──────────────────────────────────────────────────────────── */
+.svc-features-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 80px 0;
+}
+
+.svc-features-inner {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.svc-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.svc-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+}
+
+.svc-feature-row:hover {
+  background: var(--rose-dim);
+}
+
+.svc-feature-check {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--rose-dim);
+  border: 1px solid var(--rose-bloom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rose);
+  flex-shrink: 0;
+}
+
+.svc-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.svc-feature-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.svc-feature-sub {
+  font-size: 0.76rem;
+  color: var(--text-4);
+  line-height: 1.4;
+}
+
+/* ─── FAQ ────────────────────────────────────────────────────────────────────── */
+.svc-faq-section {
+  background: var(--bg);
+}
+
+.svc-faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.svc-faq-item {
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.svc-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.svc-faq-q:hover {
+  color: var(--green);
+}
+
+.svc-faq-chevron {
+  flex-shrink: 0;
+  color: var(--green);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.svc-faq-item--open .svc-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.svc-faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out-expo), padding 0.3s;
+}
+
+.svc-faq-item--open .svc-faq-a {
+  max-height: 300px;
+  padding-bottom: 20px;
+}
+
+.svc-faq-a p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  padding: 0 4px;
+}
+
+/* ─── CTA Section ────────────────────────────────────────────────────────────── */
+.svc-cta-section {
+  padding: 80px 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+}
+
+.svc-cta-inner {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  padding: 64px 56px;
+  border: 1px solid var(--border-2);
+  background: linear-gradient(135deg, var(--rose-pale) 0%, var(--bg-2) 60%);
+}
+
+.svc-cta-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 50%, rgba(139,38,53,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 20%, rgba(184,137,90,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.svc-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.svc-cta-sub {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin: 12px 0 28px;
+}
+
+.svc-cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.svc-cta-emergency {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .svc-hero-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .svc-hero-badge-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+  }
+  .svc-hero-rings { display: none; }
+  .svc-features-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .svc-hero {
+    min-height: 70vh;
+    padding-top: 72px;
+  }
+  .svc-hero-content {
+    padding-top: 32px;
+    padding-bottom: 56px;
+  }
+  .svc-hero-badge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .svc-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-cta-inner {
+    padding: 40px 28px;
+  }
+  .svc-cta-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .svc-hero-badge-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .svc-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .svc-hero-ctas .btn-primary,
+  .svc-hero-ctas .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .svc-cta-actions .btn-primary,
+  .svc-cta-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

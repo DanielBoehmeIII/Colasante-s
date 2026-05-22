@@ -1,0 +1,362 @@
+- generic [ref=e2]:
+  - generic [ref=e4]: Colasante's
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - button "Colasante's" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: Colasante's
+      - button "Toggle menu" [ref=e10] [cursor=pointer]
+    - generic:
+      - button "Home"
+      - button "Services"
+      - button "About"
+      - button "Contact"
+      - link "Call (412) 621-0700":
+        - /url: tel:+14126210700
+    - generic [ref=e15]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - paragraph [ref=e20]: Pittsburgh's Florist Since 1998
+          - heading "Flowers for" [level=1] [ref=e21]
+          - heading "Every Moment" [level=1] [ref=e22]
+        - generic [ref=e23]:
+          - paragraph [ref=e24]: Custom arrangements crafted fresh daily from seasonal and imported blooms — delivered across Pittsburgh.
+          - generic [ref=e25]:
+            - button "Order Now" [ref=e26] [cursor=pointer]
+            - button "Browse Occasions" [ref=e27] [cursor=pointer]
+          - link "(412) 621-0700" [ref=e28] [cursor=pointer]:
+            - /url: tel:+14126210700
+      - generic [ref=e31]: Scroll
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: 25+
+        - generic [ref=e36]: Years in Pittsburgh
+      - generic [ref=e37]:
+        - generic [ref=e38]: 500+
+        - generic [ref=e39]: Weddings Served
+      - generic [ref=e40]:
+        - generic [ref=e41]: Daily
+        - generic [ref=e42]: Fresh Arrivals
+      - generic [ref=e43]:
+        - generic [ref=e44]: 5★
+        - generic [ref=e45]: Google Rating
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: Shop by Occasion
+        - heading "Browse by Occasion" [level=2] [ref=e50]
+        - paragraph [ref=e51]: Whether it's a birthday, a wedding, or just a Tuesday — we have the perfect flowers for every moment.
+      - generic [ref=e52]:
+        - link "Birthday Make someone's day unforgettable with a stunning birthday bouquet crafted to their personality and favorite colors. Shop Birthday" [ref=e53] [cursor=pointer]:
+          - /url: /birthday
+          - img [ref=e55]
+          - heading "Birthday" [level=3] [ref=e59]
+          - generic:
+            - paragraph: Make someone's day unforgettable with a stunning birthday bouquet crafted to their personality and favorite colors.
+            - generic:
+              - text: Shop Birthday
+              - img
+        - link "Wedding From bridal bouquets to ceremony installations, we craft every piece to make your wedding day breathtaking. Plan Wedding Flowers" [ref=e60] [cursor=pointer]:
+          - /url: /wedding
+          - img [ref=e62]
+          - heading "Wedding" [level=3] [ref=e66]
+          - generic:
+            - paragraph: From bridal bouquets to ceremony installations, we craft every piece to make your wedding day breathtaking.
+            - generic:
+              - text: Plan Wedding Flowers
+              - img
+        - link "Anniversary Celebrate another year of love with romantic roses, garden peonies, or a custom arrangement just for them. Shop Anniversary" [ref=e67] [cursor=pointer]:
+          - /url: /anniversary
+          - img [ref=e69]
+          - heading "Anniversary" [level=3] [ref=e71]
+          - generic:
+            - paragraph: Celebrate another year of love with romantic roses, garden peonies, or a custom arrangement just for them.
+            - generic:
+              - text: Shop Anniversary
+              - img
+        - link "Sympathy Express compassion and comfort with thoughtfully arranged tributes, wreaths, and memorial pieces. Shop Sympathy" [ref=e72] [cursor=pointer]:
+          - /url: /sympathy
+          - img [ref=e74]
+          - heading "Sympathy" [level=3] [ref=e78]
+          - generic:
+            - paragraph: Express compassion and comfort with thoughtfully arranged tributes, wreaths, and memorial pieces.
+            - generic:
+              - text: Shop Sympathy
+              - img
+        - link "Just Because No occasion needed. Surprise someone you love with a fresh arrangement, simply because they deserve it. Shop Just Because" [ref=e79] [cursor=pointer]:
+          - /url: /just-because
+          - img [ref=e81]
+          - heading "Just Because" [level=3] [ref=e84]
+          - generic:
+            - paragraph: No occasion needed. Surprise someone you love with a fresh arrangement, simply because they deserve it.
+            - generic:
+              - text: Shop Just Because
+              - img
+        - link "Corporate Premium floral arrangements for offices, hotel lobbies, galas, and corporate events — delivered on schedule. Corporate Inquiry" [ref=e85] [cursor=pointer]:
+          - /url: /corporate
+          - img [ref=e87]
+          - heading "Corporate" [level=3] [ref=e90]
+          - generic:
+            - paragraph: Premium floral arrangements for offices, hotel lobbies, galas, and corporate events — delivered on schedule.
+            - generic:
+              - text: Corporate Inquiry
+              - img
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - paragraph [ref=e94]: Featured Arrangements
+        - heading "Fresh From Our Shop" [level=2] [ref=e95]
+        - paragraph [ref=e96]: Crafted by hand, assembled the morning of delivery — from seasonal and imported blooms.
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: Bestseller
+            - img [ref=e102]
+          - generic [ref=e111]:
+            - heading "Spring Meadow" [level=3] [ref=e112]
+            - paragraph [ref=e113]: A soft lush mix of ranunculus, sweet peas, and seasonal greens in blush, ivory, and soft peach.
+            - generic [ref=e114]:
+              - generic [ref=e115]: From $68
+              - button "Order" [ref=e116] [cursor=pointer]:
+                - text: Order
+                - img [ref=e117]
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: Classic
+            - img [ref=e123]
+          - generic [ref=e132]:
+            - heading "Classic Dozen" [level=3] [ref=e133]
+            - paragraph [ref=e134]: Twelve premium long-stem roses, hand-selected and elegantly wrapped with eucalyptus and ribbon.
+            - generic [ref=e135]:
+              - generic [ref=e136]: From $95
+              - button "Order" [ref=e137] [cursor=pointer]:
+                - text: Order
+                - img [ref=e138]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: Seasonal
+            - img [ref=e144]
+          - generic [ref=e153]:
+            - heading "Garden Wildflower" [level=3] [ref=e154]
+            - paragraph [ref=e155]: Free-form and lush — lisianthus, cosmos, and foliage arranged in warm natural tones.
+            - generic [ref=e156]:
+              - generic [ref=e157]: From $55
+              - button "Order" [ref=e158] [cursor=pointer]:
+                - text: Order
+                - img [ref=e159]
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: Signature
+            - img [ref=e165]
+          - generic [ref=e174]:
+            - heading "Orchid & Succulent" [level=3] [ref=e175]
+            - paragraph [ref=e176]: "A lasting statement piece: sculptural phalaenopsis orchids paired with curated succulents."
+            - generic [ref=e177]:
+              - generic [ref=e178]: From $120
+              - button "Order" [ref=e179] [cursor=pointer]:
+                - text: Order
+                - img [ref=e180]
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - paragraph [ref=e185]: How We Serve You
+        - heading "More Than Just Flowers" [level=2] [ref=e186]
+      - generic [ref=e187]:
+        - generic [ref=e188]:
+          - img [ref=e190]
+          - heading "Same-Day Delivery" [level=3] [ref=e193]
+          - paragraph [ref=e194]: Order by noon for same-day delivery across Pittsburgh and surrounding neighborhoods.
+          - link "Learn more" [ref=e195] [cursor=pointer]:
+            - /url: /services
+            - text: Learn more
+            - img [ref=e196]
+        - generic [ref=e198]:
+          - img [ref=e200]
+          - heading "Custom Arrangements" [level=3] [ref=e203]
+          - paragraph [ref=e204]: Work directly with our florists to design a piece that perfectly matches your vision and budget.
+          - link "Learn more" [ref=e205] [cursor=pointer]:
+            - /url: /services
+            - text: Learn more
+            - img [ref=e206]
+        - generic [ref=e208]:
+          - img [ref=e210]
+          - heading "Weddings & Events" [level=3] [ref=e214]
+          - paragraph [ref=e215]: Full-service floral design for weddings, corporate galas, and styled events of any size.
+          - link "Learn more" [ref=e216] [cursor=pointer]:
+            - /url: /services
+            - text: Learn more
+            - img [ref=e217]
+    - generic [ref=e221]:
+      - generic [ref=e222]:
+        - paragraph [ref=e223]: Our Story
+        - heading "Pittsburgh's Florist, Since 1998" [level=2] [ref=e224]:
+          - text: Pittsburgh's Florist,
+          - text: Since 1998
+        - paragraph [ref=e225]: Colasante's has been part of Pittsburgh's neighborhoods for over 25 years. We started as a small shop in Shadyside and grew because people kept coming back — not just for the flowers, but for the care we put into every arrangement.
+        - paragraph [ref=e226]: We source seasonally, work with trusted growers, and assemble every piece by hand the morning it leaves our shop. Whether it's a single stem or a full wedding installation, we bring the same attention to each.
+        - generic [ref=e227]:
+          - link "Our Story" [ref=e228] [cursor=pointer]:
+            - /url: /about
+          - link "Call Us" [ref=e229] [cursor=pointer]:
+            - /url: tel:+14126210700
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - img [ref=e233]
+          - paragraph [ref=e249]: "\"Every stem tells a story.\""
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - generic [ref=e252]: 25+
+            - generic [ref=e253]: Years in Pittsburgh
+          - generic [ref=e254]:
+            - generic [ref=e255]: 500+
+            - generic [ref=e256]: Weddings Served
+          - generic [ref=e257]:
+            - generic [ref=e258]: Daily
+            - generic [ref=e259]: Fresh Arrivals
+          - generic [ref=e260]:
+            - generic [ref=e261]: 5★
+            - generic [ref=e262]: Google Rating
+    - generic [ref=e264]:
+      - generic [ref=e265]:
+        - paragraph [ref=e266]: Customer Reviews
+        - heading "What Pittsburgh Says" [level=2] [ref=e267]
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - img [ref=e271]
+            - img [ref=e273]
+            - img [ref=e275]
+            - img [ref=e277]
+            - img [ref=e279]
+          - paragraph [ref=e281]: "\"Ordered a custom bridal bouquet and couldn't have been more thrilled. The florists really listened to my vision — the peonies and garden roses were absolutely stunning.\""
+          - generic [ref=e282]:
+            - generic [ref=e283]: Emily R.
+            - generic [ref=e284]: Shadyside, PA
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - img [ref=e287]
+            - img [ref=e289]
+            - img [ref=e291]
+            - img [ref=e293]
+            - img [ref=e295]
+          - paragraph [ref=e297]: "\"Got a birthday arrangement delivered for my wife. She said it was the most beautiful flowers she's ever received. Same-day delivery worked perfectly. 10 out of 10.\""
+          - generic [ref=e298]:
+            - generic [ref=e299]: James M.
+            - generic [ref=e300]: Squirrel Hill, PA
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - img [ref=e303]
+            - img [ref=e305]
+            - img [ref=e307]
+            - img [ref=e309]
+            - img [ref=e311]
+          - paragraph [ref=e313]: "\"We've used Colasante's for our office lobby for two years now. The weekly arrangements are always exceptional — our clients always comment on them. Highly professional.\""
+          - generic [ref=e314]:
+            - generic [ref=e315]: Sarah K.
+            - generic [ref=e316]: Fox Chapel, PA
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - img [ref=e319]
+            - img [ref=e321]
+            - img [ref=e323]
+            - img [ref=e325]
+            - img [ref=e327]
+          - paragraph [ref=e329]: "\"Ordered anniversary flowers at 10am and they arrived by 2pm, beautifully wrapped. The roses were fresh and gorgeous. My wife was completely surprised. Will use again and again.\""
+          - generic [ref=e330]:
+            - generic [ref=e331]: David W.
+            - generic [ref=e332]: Mt. Lebanon, PA
+    - generic [ref=e335]:
+      - generic [ref=e336]:
+        - paragraph [ref=e337]: Get in Touch
+        - heading "Ready to Order or Need Advice?" [level=2] [ref=e338]:
+          - text: Ready to Order
+          - text: or Need Advice?
+        - paragraph [ref=e339]: Call, email, or fill out the form. Our florists are happy to help you choose the right arrangement for any occasion.
+        - generic [ref=e340]:
+          - link "Call or Text (412) 621-0700" [ref=e341] [cursor=pointer]:
+            - /url: tel:+14126210700
+            - img [ref=e343]
+            - generic [ref=e345]:
+              - generic [ref=e346]: Call or Text
+              - generic [ref=e347]: (412) 621-0700
+          - link "Email Us hello@colasantes.com" [ref=e348] [cursor=pointer]:
+            - /url: mailto:hello@colasantes.com
+            - img [ref=e350]
+            - generic [ref=e353]:
+              - generic [ref=e354]: Email Us
+              - generic [ref=e355]: hello@colasantes.com
+          - generic [ref=e356]:
+            - img [ref=e358]
+            - generic [ref=e361]:
+              - generic [ref=e362]: Visit Us
+              - generic [ref=e363]: 4200 Penn Avenue
+              - generic [ref=e364]: Pittsburgh, PA
+      - generic [ref=e366]:
+        - heading "Send Us a Message" [level=3] [ref=e367]
+        - generic [ref=e368]:
+          - generic [ref=e369]:
+            - generic [ref=e370]: Your Name
+            - textbox "Jane Smith" [ref=e371]
+          - generic [ref=e372]:
+            - generic [ref=e373]: Phone Number
+            - textbox "(412) 000-0000" [ref=e374]
+        - generic [ref=e375]:
+          - generic [ref=e376]: Email Address
+          - textbox "you@email.com" [ref=e377]
+        - generic [ref=e378]:
+          - generic [ref=e379]: Occasion
+          - combobox [ref=e380] [cursor=pointer]:
+            - option "Select an occasion..." [selected]
+            - option "Birthday"
+            - option "Wedding / Event"
+            - option "Anniversary"
+            - option "Sympathy"
+            - option "Just Because"
+            - option "Corporate / Business"
+            - option "Other / Custom"
+        - generic [ref=e381]:
+          - generic [ref=e382]: Tell Us About Your Order
+          - textbox "Describe your occasion, preferred colors, flowers, budget, and delivery date..." [ref=e383]
+        - button "Send Message" [ref=e384] [cursor=pointer]:
+          - text: Send Message
+          - img [ref=e385]
+    - contentinfo [ref=e387]:
+      - generic [ref=e388]:
+        - generic [ref=e389]:
+          - generic [ref=e390]: Colasante's
+          - paragraph [ref=e391]: Pittsburgh's Florist — Fresh Arrangements for Every Occasion
+          - link "(412) 621-0700" [ref=e392] [cursor=pointer]:
+            - /url: tel:+14126210700
+          - generic [ref=e393]:
+            - link "Instagram" [ref=e394] [cursor=pointer]:
+              - /url: https://instagram.com/colasantesflowers
+              - img [ref=e395]
+            - link "Facebook" [ref=e398] [cursor=pointer]:
+              - /url: https://www.facebook.com/colasantesflowers
+              - img [ref=e399]
+        - generic [ref=e401]:
+          - paragraph [ref=e402]: Navigate
+          - button "Home" [ref=e403] [cursor=pointer]
+          - button "Services" [ref=e404] [cursor=pointer]
+          - button "About" [ref=e405] [cursor=pointer]
+          - button "Contact" [ref=e406] [cursor=pointer]
+        - generic [ref=e407]:
+          - paragraph [ref=e408]: Shop
+          - button "Fresh Arrangements" [ref=e409] [cursor=pointer]
+          - button "Weddings & Events" [ref=e410] [cursor=pointer]
+          - button "Custom Designs" [ref=e411] [cursor=pointer]
+          - button "Same-Day Delivery" [ref=e412] [cursor=pointer]
+          - button "Weekly Subscriptions" [ref=e413] [cursor=pointer]
+        - generic [ref=e414]:
+          - paragraph [ref=e415]: Contact
+          - link "(412) 621-0700" [ref=e416] [cursor=pointer]:
+            - /url: tel:+14126210700
+          - link "hello@colasantes.com" [ref=e417] [cursor=pointer]:
+            - /url: mailto:hello@colasantes.com
+          - paragraph [ref=e418]: 4200 Penn Avenue
+          - paragraph [ref=e419]: Pittsburgh, PA
+      - generic [ref=e420]:
+        - paragraph [ref=e421]: © 2026 Colasante's · Pittsburgh, PA · All rights reserved
+        - paragraph [ref=e422]: Delivering fresh flowers across Pittsburgh & surrounding neighborhoods
+    - generic [ref=e423]:
+      - link "Call Now" [ref=e424] [cursor=pointer]:
+        - /url: tel:+14126210700
+        - img [ref=e425]
+        - text: Call Now
+      - button "Order Flowers" [ref=e427] [cursor=pointer]
